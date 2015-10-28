@@ -286,6 +286,7 @@
 				BAFD05D71BE057BA00799FBD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
