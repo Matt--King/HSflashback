@@ -238,10 +238,17 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 </variation>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="murky2" translatesAutoresizingMaskIntoConstraints="NO" id="jal-DM-wyb">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7V-Ts-PnR">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Take Picture"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="118" y="381" width="85" height="30"/>
+                                </variation>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TvN-uD-Pte">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="40" y="53" width="240" height="219"/>
+                                    <rect key="frame" x="99" y="73" width="126" height="198"/>
                                 </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty" translatesAutoresizingMaskIntoConstraints="NO" id="pam-1T-jZC">
@@ -255,14 +262,16 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="yRh-KG-a1u"/>
-                                <exclude reference="jal-DM-wyb"/>
+                                <exclude reference="I7V-Ts-PnR"/>
+                                <exclude reference="TvN-uD-Pte"/>
                                 <exclude reference="pam-1T-jZC"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="yRh-KG-a1u"/>
-                                <include reference="jal-DM-wyb"/>
+                                <include reference="I7V-Ts-PnR"/>
+                                <include reference="TvN-uD-Pte"/>
                                 <include reference="pam-1T-jZC"/>
                             </mask>
                         </variation>
