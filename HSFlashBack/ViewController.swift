@@ -67,6 +67,16 @@ class Settings_Page: UIViewController, UIImagePickerControllerDelegate, UINaviga
         presentViewController(imagePicker, animated: true, completion: nil)
         
             }
+    
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+          //  imageView.contentMode = .ScaleAspectFill
+            imageView.image = pickedImage
+        }
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     // Share App Feature
     
     @IBAction func showShare(sender: UIButton) {
@@ -76,6 +86,11 @@ class Settings_Page: UIViewController, UIImagePickerControllerDelegate, UINaviga
         
         self.presentViewController(activityViewController, animated: true, completion: nil)
         
+    }
+    
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     // Full class

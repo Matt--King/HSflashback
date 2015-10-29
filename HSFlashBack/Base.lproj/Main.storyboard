@@ -61,7 +61,7 @@
                         <viewControllerLayoutGuide type="bottom" id="vvH-7X-meI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pQV-Gk-PwJ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6b-Zs-Zg4" userLabel="Patron_Warrior_Button">
@@ -128,7 +128,7 @@
                         <viewControllerLayoutGuide type="bottom" id="4Q0-cN-sji"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="sYn-yt-xPU">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6xl-TK-TsI">
@@ -278,6 +278,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="cameraButton" destination="I7V-Ts-PnR" id="FYN-rL-yb7"/>
+                        <outlet property="imageView" destination="TvN-uD-Pte" id="FDK-HP-c8X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="anl-il-Lha" userLabel="First Responder" sceneMemberID="firstResponder"/>
