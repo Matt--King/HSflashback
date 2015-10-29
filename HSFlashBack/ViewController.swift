@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import MobileCoreServices
 
 //MARK: Home Page
 
@@ -49,17 +49,24 @@ class Simulators_Page: UIViewController {
 
 }
 
-class Settings_Page: UIViewController {
+class Settings_Page: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    @IBOutlet weak var cameraButton: UIButton!
+    @IBOutlet var imageView: UIImageView!
+ 
     
-    // PJSalt Feature
-    
+    let imagePicker = UIImagePickerController()
     
     // Custom Hero Portrait Feature
     
-    
-    
-    
+    @IBAction func loadImage(sender: UIButton) {
+        
+        
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .Camera
+        presentViewController(imagePicker, animated: true, completion: nil)
+        
+            }
     // Share App Feature
     
     @IBAction func showShare(sender: UIButton) {
@@ -81,6 +88,7 @@ class Settings_Page: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        imagePicker.delegate = self
     }
     
     override func didReceiveMemoryWarning() {

@@ -61,7 +61,7 @@
                         <viewControllerLayoutGuide type="bottom" id="vvH-7X-meI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pQV-Gk-PwJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6b-Zs-Zg4" userLabel="Patron_Warrior_Button">
@@ -128,7 +128,7 @@
                         <viewControllerLayoutGuide type="bottom" id="4Q0-cN-sji"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="sYn-yt-xPU">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6xl-TK-TsI">
@@ -151,11 +151,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Saltiness Simulator" id="lJ1-zE-Wzy">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="8yw-Ar-Arg">
-                                            <connections>
-                                                <segue destination="UQn-TF-rGs" kind="show" id="aPd-14-9S1"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="8yw-Ar-Arg"/>
                                     </navigationItem>
                                 </items>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -244,11 +240,14 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="118" y="381" width="85" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="loadImage:" destination="vlm-b6-Yz7" eventType="touchUpInside" id="z0u-9D-DLs"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TvN-uD-Pte">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="99" y="73" width="126" height="198"/>
+                                    <rect key="frame" x="97" y="81" width="126" height="198"/>
                                 </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty" translatesAutoresizingMaskIntoConstraints="NO" id="pam-1T-jZC">
@@ -277,6 +276,9 @@
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="cameraButton" destination="I7V-Ts-PnR" id="FYN-rL-yb7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="anl-il-Lha" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -306,9 +308,6 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="murky2" translatesAutoresizingMaskIntoConstraints="NO" id="icL-3W-2vh">
-                                <rect key="frame" x="35" y="67" width="250" height="345"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Emote" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V78-VH-gWR" userLabel="Emote">
                                 <rect key="frame" x="20" y="402" width="280" height="21"/>
                                 <accessibility key="accessibilityConfiguration" label="Emote"/>
@@ -319,6 +318,9 @@
                                     <rect key="frame" x="20" y="421" width="280" height="22"/>
                                 </variation>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="empty" translatesAutoresizingMaskIntoConstraints="NO" id="icL-3W-2vh">
+                                <rect key="frame" x="35" y="67" width="250" height="345"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
@@ -339,11 +341,9 @@
     </scenes>
     <resources>
         <image name="empty" width="823" height="1179"/>
-        <image name="murky2" width="689" height="648"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aPd-14-9S1"/>
-        <segue reference="7Jd-XN-i6b"/>
+        <segue reference="1gs-rY-1S1"/>
         <segue reference="nX7-cL-6W3"/>
     </inferredMetricsTieBreakers>
 </document>
