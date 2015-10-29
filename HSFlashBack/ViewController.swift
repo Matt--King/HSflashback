@@ -8,31 +8,101 @@
 
 import UIKit
 
-class Home_Page: UIViewController {
 
+//MARK: Home Page
+
+class Home_Page: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+}
 
+
+class Simulators_Page: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        // navigationItem.title = "One"
+        navigationItem.title = "Test"
+    }
+    
+    
+  
 
 }
 
-class Settings_Page: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class Settings_Page: UIViewController {
     
+    
+    // PJSalt Feature
+    
+    
+    // Custom Hero Portrait Feature
+    
+    
+    
+    
+    // Share App Feature
+    
+    @IBAction func showShare(sender: UIButton) {
+        let firstActivityItem = "I'm loving the Hearthstone Flashbacks App!"
+        
+        let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [firstActivityItem], applicationActivities: nil)
+        
+        self.presentViewController(activityViewController, animated: true, completion: nil)
+        
+    }
+    
+    // Full class
+    
+    
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
+    
+}
+
+
+class Salt_Sim_Page: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+   
     
     @IBOutlet weak var picker: UIPickerView!
     var pickerData: [String] = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
+        // Do any additional setup after loading the view, typically from a nib.
         
         // Connect data:
         self.picker.delegate = self
@@ -40,6 +110,8 @@ class Settings_Page: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         
         // Input data into the Array:
         pickerData = ["Druid", "Hunter", "Mage", "Paladin", "Priest",  "Rogue", "Shaman", "Warlock", "Warrior"]
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -47,13 +119,9 @@ class Settings_Page: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         // Dispose of any resources that can be recreated.
     }
     
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        
-            let svc = segue.destinationViewController as! Salt_Page
-            svc.heroSelected = (picker.selectedRowInComponent(<#T##component: Int##Int#>))
-        
-    }
-
+    
+    
+    //MARK: UIPickerView functions
     
     // The number of columns of data
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -69,23 +137,54 @@ class Settings_Page: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerData[row]
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        var saltVC = Salt_Page()
+        saltVC = segue.destinationViewController as! Salt_Page
+        
+        var temp: String
+        let input = picker.selectedRowInComponent(0)
+        switch(input) {
+        case 0: //Druid
+            temp = "Malfurion_Stormrage"
+        case 1: //Hunter
+            temp = "Rexxar"
+        case 2: //Mage
+            temp = "Jaina_Proudmoore"
+        case 3: //Paladin
+            temp = "Uther_Lightbringer"
+        case 4: //Priest
+            temp = "Anduin_Wrynn"
+        case 5: //Rogue
+            temp = "Valeera_Sanguinar"
+        case 6: //Shaman
+            temp = "Thrall"
+        case 7: //Warlock
+            temp = "Guldan"
+        default: //Warrior
+            temp = "Garrosh_Hellscream"
+        }
+        
+        saltVC.heroString = temp
+    }
+
 }
-
-
-
 
 class Salt_Page: UIViewController {
     
-    var heroSelected:Int!
-    
-    @IBOutlet weak var image: UIImageView!
-    @IBOutlet var saltLabel: UIView!
-    var imageName: [String] = [String]()
+    @IBOutlet weak var heroPortrait: UIImageView!
+    @IBOutlet weak var saltLabel: UILabel!
+    var heroString: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
+        //Set up the Emote and Image
+        self.heroPortrait.image = UIImage(named: heroString)
+        let heroName: String = heroString.stringByReplacingOccurrencesOfString("_", withString: " ")
+        saltLabel.text = heroName + " makes you salty"
         
     }
     
@@ -93,6 +192,4 @@ class Salt_Page: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
 }

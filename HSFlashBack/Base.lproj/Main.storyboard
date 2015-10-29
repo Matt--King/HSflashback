@@ -17,19 +17,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UkO-gw-Wy7">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UkO-gw-Wy7" userLabel="Simulator_Button">
                                 <rect key="frame" x="20" y="125" width="280" height="100"/>
-                                <state key="normal" title="GET IN HERE"/>
+                                <accessibility key="accessibilityConfiguration" label="Simulator_Button"/>
+                                <state key="normal" title="Simulators"/>
+                                <connections>
+                                    <segue destination="UQn-TF-rGs" kind="show" id="P5c-WQ-XCC"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FES-eR-VWF">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FES-eR-VWF" userLabel="GPS_Button">
                                 <rect key="frame" x="20" y="233" width="280" height="100"/>
+                                <accessibility key="accessibilityConfiguration" label="GPS_Button"/>
                                 <state key="normal" title="Source of Pain"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MOQ-8K-bXw">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MOQ-8K-bXw" userLabel="Salt_Button">
                                 <rect key="frame" x="20" y="341" width="280" height="100"/>
-                                <state key="normal" title="Settings"/>
+                                <state key="normal" title="Miscellaneous"/>
                                 <connections>
-                                    <segue destination="vlm-b6-Yz7" kind="presentation" id="RfY-TN-89A"/>
+                                    <segue destination="vlm-b6-Yz7" kind="show" id="GjQ-MN-kCq"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hearthstone Flashback Simulator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6x-Ag-1hP">
@@ -45,7 +50,153 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1117" y="-876"/>
+            <point key="canvasLocation" x="-1974" y="-818"/>
+        </scene>
+        <!--Simulators Page-->
+        <scene sceneID="dmx-U5-rfa">
+            <objects>
+                <viewController id="UQn-TF-rGs" userLabel="Simulators Page" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BgS-TL-6VY"/>
+                        <viewControllerLayoutGuide type="bottom" id="vvH-7X-meI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pQV-Gk-PwJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6b-Zs-Zg4" userLabel="Patron_Warrior_Button">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Patron Warrior"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="110" y="182" width="100" height="30"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fr8-ed-LrN" userLabel="Salt_Sim_Button">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="Salt_Sim_Button"/>
+                                <state key="normal" title="General Saltiness"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="101" y="126" width="119" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="O1I-XG-WbR" kind="show" id="7Jd-XN-i6b"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZK-xN-3xs">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Simulators" id="4t9-Uy-hK2">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="zyR-xs-N31">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="hEV-3S-HGF"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                </variation>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="K6b-Zs-Zg4"/>
+                                <exclude reference="fr8-ed-LrN"/>
+                                <exclude reference="fZK-xN-3xs"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="K6b-Zs-Zg4"/>
+                                <include reference="fr8-ed-LrN"/>
+                                <include reference="fZK-xN-3xs"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yoL-Yg-hQl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1287" y="-1516"/>
+        </scene>
+        <!--Saltiness Simulator-->
+        <scene sceneID="i5L-Ek-hXM">
+            <objects>
+                <viewController title="Saltiness Simulator" id="O1I-XG-WbR" customClass="Salt_Sim_Page" customModule="HSFlashBack" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="A19-N6-2Wf"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Q0-cN-sji"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sYn-yt-xPU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6xl-TK-TsI">
+                                <rect key="frame" x="0.0" y="66" width="320" height="216"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="94" width="320" height="216"/>
+                                </variation>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lhb-7h-xFt">
+                                <rect key="frame" x="40" y="290" width="240" height="30"/>
+                                <state key="normal" title="Unleash the Salt"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="40" y="318" width="240" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="qvu-yO-VXr" kind="show" id="UC8-O6-mYr"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mqp-8Y-03M">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Saltiness Simulator" id="lJ1-zE-Wzy">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="8yw-Ar-Arg">
+                                            <connections>
+                                                <segue destination="UQn-TF-rGs" kind="show" id="aPd-14-9S1"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                </variation>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which Hero Makes You Salty?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kul-EK-arA">
+                                <rect key="frame" x="45" y="28" width="240" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="40" y="69" width="240" height="30"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="6xl-TK-TsI"/>
+                                <exclude reference="Lhb-7h-xFt"/>
+                                <exclude reference="mqp-8Y-03M"/>
+                                <exclude reference="Kul-EK-arA"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="6xl-TK-TsI"/>
+                                <include reference="Lhb-7h-xFt"/>
+                                <include reference="mqp-8Y-03M"/>
+                                <include reference="Kul-EK-arA"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="picker" destination="6xl-TK-TsI" id="DLE-g2-0CM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sHr-wN-ztw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-541.5" y="-1546"/>
         </scene>
         <!--Settings Page-->
         <scene sceneID="gRU-Y4-5sX">
@@ -59,37 +210,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Which Hero Makes You Salty?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YhZ-YN-kaw">
-                                <rect key="frame" x="45" y="28" width="240" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h41-03-bxk">
-                                <rect key="frame" x="0.0" y="66" width="320" height="216"/>
-                            </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fT1-Xh-jWm">
-                                <rect key="frame" x="40" y="290" width="240" height="30"/>
-                                <state key="normal" title="Unleash the Salt"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E0L-ZG-qGQ" userLabel="Share_Button">
+                                <rect key="frame" x="20" y="408" width="280" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="Share_Button">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <state key="normal" title="Share the Hearthstone Flashback App"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="442" width="280" height="30"/>
+                                </variation>
                                 <connections>
-                                    <segue destination="qvu-yO-VXr" kind="presentation" id="h8Y-ML-IRj"/>
+                                    <action selector="showShare:" destination="vlm-b6-Yz7" eventType="touchUpInside" id="Bjg-Dp-gZV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E0L-ZG-qGQ">
-                                <rect key="frame" x="20" y="408" width="280" height="30"/>
-                                <state key="normal" title="Share the App with Your Friends!"/>
-                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yRh-KG-a1u">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Miscellaneous" id="nIl-2P-fte">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="wJd-Hx-ayo">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="nX7-cL-6W3"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                </variation>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="murky2" translatesAutoresizingMaskIntoConstraints="NO" id="jal-DM-wyb">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="40" y="53" width="240" height="219"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty" translatesAutoresizingMaskIntoConstraints="NO" id="pam-1T-jZC">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="40" y="44" width="240" height="329"/>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="yRh-KG-a1u"/>
+                                <exclude reference="jal-DM-wyb"/>
+                                <exclude reference="pam-1T-jZC"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="yRh-KG-a1u"/>
+                                <include reference="jal-DM-wyb"/>
+                                <include reference="pam-1T-jZC"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                    <connections>
-                        <outlet property="picker" destination="h41-03-bxk" id="H9f-Oq-Aym"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="anl-il-Lha" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1117" y="-264"/>
+            <point key="canvasLocation" x="-1317" y="-174"/>
         </scene>
         <!--Salt Page-->
         <scene sceneID="Qk0-Av-M28">
@@ -107,19 +289,27 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Tap for Salt" id="lEy-NQ-cm1">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="9vq-PU-tqC"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Concede" id="9vq-PU-tqC">
+                                            <connections>
+                                                <segue destination="O1I-XG-WbR" kind="show" id="1gs-rY-1S1"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V78-VH-gWR">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="murky2" translatesAutoresizingMaskIntoConstraints="NO" id="icL-3W-2vh">
+                                <rect key="frame" x="35" y="67" width="250" height="345"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Emote" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V78-VH-gWR" userLabel="Emote">
                                 <rect key="frame" x="20" y="402" width="280" height="21"/>
+                                <accessibility key="accessibilityConfiguration" label="Emote"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="421" width="280" height="22"/>
+                                </variation>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="malfurion" translatesAutoresizingMaskIntoConstraints="NO" id="icL-3W-2vh">
-                                <rect key="frame" x="35" y="67" width="250" height="345"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
@@ -129,16 +319,22 @@
                     </toolbarItems>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="image" destination="icL-3W-2vh" id="GAn-UV-4Xj"/>
-                        <outlet property="saltLabel" destination="joW-qi-Pt2" id="oKn-tv-HZ7"/>
+                        <outlet property="heroPortrait" destination="icL-3W-2vh" id="kQD-7u-SG1"/>
+                        <outlet property="saltLabel" destination="V78-VH-gWR" id="jvv-fE-KEm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Uy-hX-9Ar" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1117" y="343"/>
+            <point key="canvasLocation" x="328.5" y="-1546"/>
         </scene>
     </scenes>
     <resources>
-        <image name="malfurion" width="250" height="345"/>
+        <image name="empty" width="823" height="1179"/>
+        <image name="murky2" width="689" height="648"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="aPd-14-9S1"/>
+        <segue reference="7Jd-XN-i6b"/>
+        <segue reference="nX7-cL-6W3"/>
+    </inferredMetricsTieBreakers>
 </document>
