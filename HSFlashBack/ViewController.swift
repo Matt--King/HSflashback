@@ -222,9 +222,8 @@ class Salt_Page: UIViewController, AVAudioPlayerDelegate, UIGestureRecognizerDel
     }
     @IBAction func onHeroTap(sender: UITapGestureRecognizer) {
         print("tap")
-        var player = AVAudioPlayer()
-       /* let sound = NSURL(fileURLWithPath:
-            NSBundle.mainBundle().pathForResource("Anduin_Wrynn_", ofType:
+        var audioPlayer = AVAudioPlayer()
+        let sound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("audiofile", ofType:
                 "mp3")!)
         do{
             print("Loading sound")
@@ -238,10 +237,10 @@ class Salt_Page: UIViewController, AVAudioPlayerDelegate, UIGestureRecognizerDel
         }catch {
             print("Error getting the audio file")
         }
-        */
+        /*        let path = NSBundle.mainBundle().pathForResource("Anduin_Wrynn_", ofType:"mp3")
+        let fileURL = NSData(fileURLWithPath: path!)
         
-        let path = NSBundle.mainBundle().pathForResource("Anduin_Wrynn_", ofType:"mp3")
-        let fileURL = NSURL(fileURLWithPath: path!)
+        
         do {
         player = try
             AVAudioPlayer(contentsOfURL: fileURL)
@@ -250,6 +249,6 @@ class Salt_Page: UIViewController, AVAudioPlayerDelegate, UIGestureRecognizerDel
         player.play()
         } catch {
             print("bork")
-        }
+        }*/
     }
 }
