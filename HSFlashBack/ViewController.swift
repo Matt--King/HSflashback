@@ -8,6 +8,7 @@
 
 import UIKit
 import MobileCoreServices
+import AVFoundation
 
 //MARK: Home Page
 
@@ -51,10 +52,8 @@ class Simulators_Page: UIViewController {
 
 class Settings_Page: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    @IBOutlet weak var cameraButton: UIButton!
-    @IBOutlet var imageView: UIImageView!
- 
     
+    @IBOutlet weak var imageView: UIImageView!
     let imagePicker = UIImagePickerController()
     
     // Custom Hero Portrait Feature
@@ -72,7 +71,7 @@ class Settings_Page: UIViewController, UIImagePickerControllerDelegate, UINaviga
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
           //  imageView.contentMode = .ScaleAspectFill
-            imageView.image = pickedImage
+            self.imageView.image = pickedImage
         }
         
         dismissViewControllerAnimated(true, completion: nil)
@@ -119,6 +118,7 @@ class Settings_Page: UIViewController, UIImagePickerControllerDelegate, UINaviga
 class Salt_Sim_Page: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
    
     
+    @IBOutlet weak var launchButton: UIButton!
     @IBOutlet weak var picker: UIPickerView!
     var pickerData: [String] = [String]()
     
@@ -163,6 +163,7 @@ class Salt_Sim_Page: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
+        if (sender!.isEqual(self.launchButton)) {
         var saltVC = Salt_Page()
         saltVC = segue.destinationViewController as! Salt_Page
         
@@ -179,6 +180,7 @@ class Salt_Sim_Page: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
             temp = "Uther_Lightbringer"
         case 4: //Priest
             temp = "Anduin_Wrynn"
+            print(temp)
         case 5: //Rogue
             temp = "Valeera_Sanguinar"
         case 6: //Shaman
@@ -190,14 +192,16 @@ class Salt_Sim_Page: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
         }
         
         saltVC.heroString = temp
+        }
     }
 
 }
 
-class Salt_Page: UIViewController {
+class Salt_Page: UIViewController, AVAudioPlayerDelegate, UIGestureRecognizerDelegate {
     
-    @IBOutlet weak var heroPortrait: UIImageView!
+    
     @IBOutlet weak var saltLabel: UILabel!
+    @IBOutlet weak var heroPortrait: UIImageView!
     var heroString: String!
     
     override func viewDidLoad() {
@@ -208,11 +212,44 @@ class Salt_Page: UIViewController {
         self.heroPortrait.image = UIImage(named: heroString)
         let heroName: String = heroString.stringByReplacingOccurrencesOfString("_", withString: " ")
         saltLabel.text = heroName + " makes you salty"
+        print(heroString)
         
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @IBAction func onHeroTap(sender: UITapGestureRecognizer) {
+        print("tap")
+        var player = AVAudioPlayer()
+       /* let sound = NSURL(fileURLWithPath:
+            NSBundle.mainBundle().pathForResource("Anduin_Wrynn_", ofType:
+                "mp3")!)
+        do{
+            print("Loading sound")
+            let audioPlayer = try
+                AVAudioPlayer(contentsOfURL:sound)
+            print("Preparing to play")
+            audioPlayer.delegate = self
+            audioPlayer.prepareToPlay()
+            print("Play")
+            audioPlayer.play()
+        }catch {
+            print("Error getting the audio file")
+        }
+        */
+        
+        let path = NSBundle.mainBundle().pathForResource("Anduin_Wrynn_", ofType:"mp3")
+        let fileURL = NSURL(fileURLWithPath: path!)
+        do {
+        player = try
+            AVAudioPlayer(contentsOfURL: fileURL)
+        player.prepareToPlay()
+        player.delegate = self
+        player.play()
+        } catch {
+            print("bork")
+        }
     }
 }
