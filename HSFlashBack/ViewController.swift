@@ -197,7 +197,7 @@ class Salt_Sim_Page: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
 
 }
 
-class Salt_Page: UIViewController, AVAudioPlayerDelegate, UIGestureRecognizerDelegate {
+class Salt_Page: UIViewController {
     
     
     @IBOutlet weak var saltLabel: UILabel!
@@ -220,8 +220,23 @@ class Salt_Page: UIViewController, AVAudioPlayerDelegate, UIGestureRecognizerDel
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func onHeroTap(sender: UITapGestureRecognizer) {
-        print("tap")
+   
+}
+
+class GPS_Page: UIViewController {
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
+        // Do any additional setup after loading the view, typically from a nib.
+    
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
 }
