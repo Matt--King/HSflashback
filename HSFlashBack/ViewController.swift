@@ -127,12 +127,14 @@ class Salt_Sim_Page: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         let path = NSBundle.mainBundle().pathForResource("hsfbData", ofType: "plist")
+       
         let data = NSDictionary(contentsOfFile: path!)
         if let dict = data{
             saltCountVal = dict.objectForKey(saltCountKey) as! NSInteger
         }
-        
         
         // Do any additional setup after loading the view, typically from a nib.
         
@@ -174,6 +176,8 @@ class Salt_Sim_Page: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
             var saltVC = Salt_Page()
             saltVC = segue.destinationViewController as! Salt_Page
             
+            //Increment the salt count and write to the stored file
+            //This functionality works on the emulator but not an iPod. y u do dis apple
             let path = NSBundle.mainBundle().pathForResource("hsfbData", ofType: "plist")
             let dict: NSMutableDictionary = ["XInitializerItem": "DoNotEverChangeMe"]
             let saltCountValInc = saltCountVal + 1
