@@ -231,9 +231,8 @@ class GPS_Page: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var latBox: UILabel!
     @IBOutlet weak var lonBox: UILabel!
-    
-    @IBOutlet weak var locationBox: UILabel!
-    
+    @IBOutlet weak var locBox: UILabel!
+    @IBOutlet weak var closestServer: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -251,6 +250,8 @@ class GPS_Page: UIViewController, CLLocationManagerDelegate {
                 createLocationManager(startImmediately: true)
             default:
                 /* No */
+                locBox.hidden = true
+                closestServer.hidden = true
                 latBox.text = "Location services have not "
                 lonBox.text = "been enabled for this app"
                 
@@ -266,16 +267,18 @@ class GPS_Page: UIViewController, CLLocationManagerDelegate {
             locations: [CLLocation]) {
                 if locations.count == 0{
                     //handle error here
-                    return
-                }
+                    print("there was no location to use")
+                } else {
                 let newLocation = locations[0]
+                //Hard code this for now, eventually we need to fix this
+                closestServer.text = "Your Hearthstone trauma is occurring on the Blizzard servers located in New York City, NY, USA!"
                 
-                locationBox.hidden = false
-                lat = (newLocation.coordinate.latitude )
+                
+                lat = (newLocation.coordinate.latitude)
                 lon = (newLocation.coordinate.longitude)
                 latBox.text = "Latitude = \(lat)"
                 lonBox.text = "Longitude = \(lon)"
-                
+                }
         }
         
     func createLocationManager(startImmediately startImmediately: Bool){

@@ -220,6 +220,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Current Location is:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNX-Cy-WFV">
+                                <rect key="frame" x="0.0" y="72" width="320" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPS stuff goes here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sK1-HM-eyz">
+                                <rect key="frame" x="0.0" y="101" width="320" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPS stuff goes here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMf-GW-kdB">
+                                <rect key="frame" x="0.0" y="130" width="320" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B5f-bD-zS6">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
@@ -237,46 +255,42 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPS stuff goes here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOz-vx-b77">
-                                <rect key="frame" x="0.0" y="230" width="320" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPS stuff goes here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q57-4F-TCZ">
-                                <rect key="frame" x="0.0" y="259" width="320" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Current Location is:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ok-Hr-suv">
-                                <rect key="frame" x="0.0" y="201" width="320" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bouncesZoom="NO" keyboardDismissMode="interactive" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9e-9g-eDx">
+                                <rect key="frame" x="0.0" y="159" width="320" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="XPT-yh-XJ2"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="B5f-bD-zS6" firstAttribute="centerX" secondItem="qWt-7z-COv" secondAttribute="centerX" id="1Ln-pm-PRZ"/>
-                            <constraint firstItem="3ok-Hr-suv" firstAttribute="width" secondItem="qWt-7z-COv" secondAttribute="width" id="EnB-9f-pCk"/>
-                            <constraint firstItem="bOz-vx-b77" firstAttribute="centerX" secondItem="qWt-7z-COv" secondAttribute="centerX" id="KNP-Y4-PMc"/>
-                            <constraint firstItem="bOz-vx-b77" firstAttribute="top" secondItem="3ok-Hr-suv" secondAttribute="bottom" constant="8" id="MhT-7I-xgh"/>
-                            <constraint firstItem="3ok-Hr-suv" firstAttribute="centerX" secondItem="qWt-7z-COv" secondAttribute="centerX" id="PcR-tL-aoJ"/>
-                            <constraint firstItem="bOz-vx-b77" firstAttribute="centerY" secondItem="qWt-7z-COv" secondAttribute="centerY" id="aiZ-HC-4Jg"/>
-                            <constraint firstItem="B5f-bD-zS6" firstAttribute="top" secondItem="s44-2B-I2D" secondAttribute="bottom" id="fTi-rE-1lP"/>
-                            <constraint firstItem="q57-4F-TCZ" firstAttribute="width" secondItem="qWt-7z-COv" secondAttribute="width" id="kaI-zI-egj"/>
-                            <constraint firstItem="bOz-vx-b77" firstAttribute="width" secondItem="qWt-7z-COv" secondAttribute="width" id="mgG-xv-u3n"/>
-                            <constraint firstItem="B5f-bD-zS6" firstAttribute="width" secondItem="qWt-7z-COv" secondAttribute="width" id="pQc-XE-MlV"/>
-                            <constraint firstItem="q57-4F-TCZ" firstAttribute="top" secondItem="bOz-vx-b77" secondAttribute="bottom" constant="8" id="q0e-0X-TOk"/>
-                            <constraint firstItem="q57-4F-TCZ" firstAttribute="centerX" secondItem="qWt-7z-COv" secondAttribute="centerX" id="xbo-y7-iJc"/>
+                            <constraint firstItem="i9e-9g-eDx" firstAttribute="width" secondItem="qWt-7z-COv" secondAttribute="width" id="0VK-jL-021"/>
+                            <constraint firstItem="gNX-Cy-WFV" firstAttribute="top" secondItem="B5f-bD-zS6" secondAttribute="bottom" constant="8" id="4l2-wI-ES4"/>
+                            <constraint firstItem="sK1-HM-eyz" firstAttribute="top" secondItem="gNX-Cy-WFV" secondAttribute="bottom" constant="8" id="88O-hP-bGU"/>
+                            <constraint firstItem="UMf-GW-kdB" firstAttribute="width" secondItem="qWt-7z-COv" secondAttribute="width" id="Q37-Ju-I6s"/>
+                            <constraint firstItem="gNX-Cy-WFV" firstAttribute="width" secondItem="qWt-7z-COv" secondAttribute="width" id="VkH-zR-qSd"/>
+                            <constraint firstItem="i9e-9g-eDx" firstAttribute="centerX" secondItem="qWt-7z-COv" secondAttribute="centerX" id="ZLr-Z1-YWD"/>
+                            <constraint firstItem="UMf-GW-kdB" firstAttribute="centerX" secondItem="qWt-7z-COv" secondAttribute="centerX" id="ZzB-dL-vYU"/>
+                            <constraint firstItem="B5f-bD-zS6" firstAttribute="centerX" secondItem="qWt-7z-COv" secondAttribute="centerX" id="cUl-J6-uRz"/>
+                            <constraint firstItem="B5f-bD-zS6" firstAttribute="width" secondItem="qWt-7z-COv" secondAttribute="width" id="d5g-PO-Rsc"/>
+                            <constraint firstItem="i9e-9g-eDx" firstAttribute="top" secondItem="UMf-GW-kdB" secondAttribute="bottom" constant="8" id="lKc-H5-459"/>
+                            <constraint firstItem="sK1-HM-eyz" firstAttribute="width" secondItem="qWt-7z-COv" secondAttribute="width" id="oes-4h-WUI"/>
+                            <constraint firstItem="sK1-HM-eyz" firstAttribute="centerX" secondItem="qWt-7z-COv" secondAttribute="centerX" id="qnW-r9-K6y"/>
+                            <constraint firstItem="gNX-Cy-WFV" firstAttribute="centerX" secondItem="qWt-7z-COv" secondAttribute="centerX" id="w54-WL-cad"/>
+                            <constraint firstItem="UMf-GW-kdB" firstAttribute="top" secondItem="sK1-HM-eyz" secondAttribute="bottom" constant="8" id="xWa-GN-FRd"/>
+                            <constraint firstItem="B5f-bD-zS6" firstAttribute="top" secondItem="s44-2B-I2D" secondAttribute="bottom" id="xam-Mc-uCO"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="latBox" destination="bOz-vx-b77" id="xbc-Ma-JFY"/>
-                        <outlet property="locationBox" destination="3ok-Hr-suv" id="HcY-QE-655"/>
-                        <outlet property="lonBox" destination="q57-4F-TCZ" id="Vcg-Cx-fvo"/>
+                        <outlet property="closestServer" destination="i9e-9g-eDx" id="Ktp-sr-ZMe"/>
+                        <outlet property="latBox" destination="sK1-HM-eyz" id="i4E-Jk-HaO"/>
+                        <outlet property="locBox" destination="gNX-Cy-WFV" id="lP6-Gq-Rzt"/>
+                        <outlet property="lonBox" destination="UMf-GW-kdB" id="Qym-R5-C8d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V93-Es-nR3" userLabel="First Responder" sceneMemberID="firstResponder"/>
