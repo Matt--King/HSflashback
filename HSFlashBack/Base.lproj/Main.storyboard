@@ -220,12 +220,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GPS stuff goes here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q57-4F-TCZ">
-                                <rect key="frame" x="20" y="229" width="280" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B5f-bD-zS6">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
@@ -243,15 +237,47 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPS stuff goes here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOz-vx-b77">
+                                <rect key="frame" x="0.0" y="230" width="320" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPS stuff goes here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q57-4F-TCZ">
+                                <rect key="frame" x="0.0" y="259" width="320" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Current Location is:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ok-Hr-suv">
+                                <rect key="frame" x="0.0" y="201" width="320" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="B5f-bD-zS6" firstAttribute="centerX" secondItem="qWt-7z-COv" secondAttribute="centerX" id="1Ln-pm-PRZ"/>
+                            <constraint firstItem="3ok-Hr-suv" firstAttribute="width" secondItem="qWt-7z-COv" secondAttribute="width" id="EnB-9f-pCk"/>
+                            <constraint firstItem="bOz-vx-b77" firstAttribute="centerX" secondItem="qWt-7z-COv" secondAttribute="centerX" id="KNP-Y4-PMc"/>
+                            <constraint firstItem="bOz-vx-b77" firstAttribute="top" secondItem="3ok-Hr-suv" secondAttribute="bottom" constant="8" id="MhT-7I-xgh"/>
+                            <constraint firstItem="3ok-Hr-suv" firstAttribute="centerX" secondItem="qWt-7z-COv" secondAttribute="centerX" id="PcR-tL-aoJ"/>
+                            <constraint firstItem="bOz-vx-b77" firstAttribute="centerY" secondItem="qWt-7z-COv" secondAttribute="centerY" id="aiZ-HC-4Jg"/>
                             <constraint firstItem="B5f-bD-zS6" firstAttribute="top" secondItem="s44-2B-I2D" secondAttribute="bottom" id="fTi-rE-1lP"/>
+                            <constraint firstItem="q57-4F-TCZ" firstAttribute="width" secondItem="qWt-7z-COv" secondAttribute="width" id="kaI-zI-egj"/>
+                            <constraint firstItem="bOz-vx-b77" firstAttribute="width" secondItem="qWt-7z-COv" secondAttribute="width" id="mgG-xv-u3n"/>
                             <constraint firstItem="B5f-bD-zS6" firstAttribute="width" secondItem="qWt-7z-COv" secondAttribute="width" id="pQc-XE-MlV"/>
+                            <constraint firstItem="q57-4F-TCZ" firstAttribute="top" secondItem="bOz-vx-b77" secondAttribute="bottom" constant="8" id="q0e-0X-TOk"/>
+                            <constraint firstItem="q57-4F-TCZ" firstAttribute="centerX" secondItem="qWt-7z-COv" secondAttribute="centerX" id="xbo-y7-iJc"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="latBox" destination="bOz-vx-b77" id="xbc-Ma-JFY"/>
+                        <outlet property="locationBox" destination="3ok-Hr-suv" id="HcY-QE-655"/>
+                        <outlet property="lonBox" destination="q57-4F-TCZ" id="Vcg-Cx-fvo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V93-Es-nR3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,7 +8,7 @@
 
 import UIKit
 import MobileCoreServices
-import AVFoundation
+import CoreLocation
 
 //MARK: Home Page
 
@@ -223,20 +223,68 @@ class Salt_Page: UIViewController {
    
 }
 
-class GPS_Page: UIViewController {
+class GPS_Page: UIViewController, CLLocationManagerDelegate {
     
+    var locationManager:CLLocationManager!
+    var lat: Double!
+    var lon: Double!
     
+    @IBOutlet weak var latBox: UILabel!
+    @IBOutlet weak var lonBox: UILabel!
+    
+    @IBOutlet weak var locationBox: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view, typically from a nib.
-    
+        locationManager = CLLocationManager()
+        locationManager.requestWhenInUseAuthorization()
+        /* Are location services available on this device? */
+        if CLLocationManager.locationServicesEnabled(){
+            /* Do we have authorization to access location services? */
+            switch CLLocationManager.authorizationStatus(){
+            case .AuthorizedAlways:
+                /* Yes, always */
+                createLocationManager(startImmediately: true)
+            case .AuthorizedWhenInUse:
+                /* Yes, only when our app is in use */
+                createLocationManager(startImmediately: true)
+            default:
+                /* No */
+                latBox.text = "Location services have not "
+                lonBox.text = "been enabled for this app"
+                
+            }
+        }
     }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+        func locationManager(manager: CLLocationManager, didUpdateLocations
+            locations: [CLLocation]) {
+                if locations.count == 0{
+                    //handle error here
+                    return
+                }
+                let newLocation = locations[0]
+                
+                locationBox.hidden = false
+                lat = (newLocation.coordinate.latitude )
+                lon = (newLocation.coordinate.longitude)
+                latBox.text = "Latitude = \(lat)"
+                lonBox.text = "Longitude = \(lon)"
+                
+        }
+        
+    func createLocationManager(startImmediately startImmediately: Bool){
+        
+                if let manager = locationManager{
+                    manager.delegate = self
+                    if startImmediately{
+                        manager.startUpdatingLocation()
+                    }
+                }
+            }
 }
