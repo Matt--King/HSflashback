@@ -174,7 +174,7 @@
                                 <rect key="frame" x="104" y="356" width="113" height="30"/>
                                 <state key="normal" title="Unleash the Salt"/>
                                 <connections>
-                                    <segue destination="qvu-yO-VXr" kind="show" id="bqW-Ui-AIN"/>
+                                    <segue destination="qvu-yO-VXr" kind="show" id="Fxx-DS-wIG"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpX-QU-87a">
@@ -209,9 +209,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="launchButton" destination="LTU-rw-7tb" id="W3c-5z-2RN"/>
-                        <outlet property="picker" destination="oWr-Ht-x74" id="Qh6-ww-cls"/>
-                        <outlet property="saltCountLabel" destination="jpX-QU-87a" id="UO4-Fr-2aF"/>
+                        <outlet property="launchButton" destination="LTU-rw-7tb" id="Klw-pB-vvo"/>
+                        <outlet property="picker" destination="oWr-Ht-x74" id="VDh-Kd-a2U"/>
+                        <outlet property="saltCountLabel" destination="jpX-QU-87a" id="T4Q-6N-jim"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sHr-wN-ztw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -297,10 +297,10 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="closestServer" destination="i9e-9g-eDx" id="Ktp-sr-ZMe"/>
-                        <outlet property="latBox" destination="sK1-HM-eyz" id="i4E-Jk-HaO"/>
-                        <outlet property="locBox" destination="gNX-Cy-WFV" id="lP6-Gq-Rzt"/>
-                        <outlet property="lonBox" destination="UMf-GW-kdB" id="Qym-R5-C8d"/>
+                        <outlet property="closestServer" destination="i9e-9g-eDx" id="ZM3-pa-9fC"/>
+                        <outlet property="latBox" destination="sK1-HM-eyz" id="7oP-2U-oYg"/>
+                        <outlet property="locBox" destination="gNX-Cy-WFV" id="ErY-g5-HAW"/>
+                        <outlet property="lonBox" destination="UMf-GW-kdB" id="nuA-kg-Jol"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V93-Es-nR3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -357,14 +357,14 @@
                                         <rect key="frame" x="45" y="370" width="231" height="30"/>
                                         <state key="normal" title="Share this App with Your Friends!"/>
                                         <connections>
-                                            <action selector="showShare:" destination="vlm-b6-Yz7" eventType="touchUpInside" id="cAq-Be-l6H"/>
+                                            <action selector="showShare:" destination="vlm-b6-Yz7" eventType="touchUpInside" id="yGA-AY-4hR"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQK-Lp-2KC">
                                         <rect key="frame" x="91" y="332" width="139" height="30"/>
                                         <state key="normal" title="Take A Picture"/>
                                         <connections>
-                                            <action selector="loadImage:" destination="vlm-b6-Yz7" eventType="touchUpInside" id="Pjb-iy-zcI"/>
+                                            <action selector="loadImage:" destination="vlm-b6-Yz7" eventType="touchUpInside" id="8ue-C4-kfS"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -399,7 +399,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="imageView" destination="B2X-NU-fml" id="TFO-51-uoR"/>
+                        <outlet property="imageView" destination="B2X-NU-fml" id="oga-5V-EBG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="anl-il-Lha" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -470,8 +470,8 @@
                     </toolbarItems>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="heroPortrait" destination="icL-3W-2vh" id="8wo-r3-EmT"/>
-                        <outlet property="saltLabel" destination="V78-VH-gWR" id="Dl1-aI-CY1"/>
+                        <outlet property="heroPortrait" destination="icL-3W-2vh" id="uzo-4g-PgH"/>
+                        <outlet property="saltLabel" destination="V78-VH-gWR" id="2e6-Mx-hzX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Uy-hX-9Ar" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -483,8 +483,8 @@
         <image name="empty" width="823" height="1179"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="S0E-c9-aLL"/>
-        <segue reference="K4g-qR-uNj"/>
+        <segue reference="gTo-Es-cxG"/>
         <segue reference="KMN-xN-BDx"/>
+        <segue reference="1gs-rY-1S1"/>
     </inferredMetricsTieBreakers>
 </document>

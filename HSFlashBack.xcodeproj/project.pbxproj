@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		BA69BB921BEB0EB500DAB5CB /* hsfbData.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA69BB911BEB0EB500DAB5CB /* hsfbData.plist */; };
+		BAD13E671BF2DD8400BC8AA8 /* Salt_Page_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD13E661BF2DD8400BC8AA8 /* Salt_Page_Controller.swift */; };
+		BAD13E691BF2DFB700BC8AA8 /* Sim_Picker_Page_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD13E681BF2DFB700BC8AA8 /* Sim_Picker_Page_Controller.swift */; };
+		BAD13E6B1BF2E0C500BC8AA8 /* GPS_View_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD13E6A1BF2E0C500BC8AA8 /* GPS_View_Controller.swift */; };
+		BAD13E6D1BF2E63500BC8AA8 /* Settings_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD13E6C1BF2E63500BC8AA8 /* Settings_Controller.swift */; };
 		BAFD05C71BE057BA00799FBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFD05C61BE057BA00799FBD /* AppDelegate.swift */; };
 		BAFD05C91BE057BA00799FBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFD05C81BE057BA00799FBD /* ViewController.swift */; };
 		BAFD05CC1BE057BA00799FBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAFD05CA1BE057BA00799FBD /* Main.storyboard */; };
@@ -16,6 +20,10 @@
 
 /* Begin PBXFileReference section */
 		BA69BB911BEB0EB500DAB5CB /* hsfbData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = hsfbData.plist; sourceTree = "<group>"; };
+		BAD13E661BF2DD8400BC8AA8 /* Salt_Page_Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Salt_Page_Controller.swift; sourceTree = "<group>"; };
+		BAD13E681BF2DFB700BC8AA8 /* Sim_Picker_Page_Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sim_Picker_Page_Controller.swift; sourceTree = "<group>"; };
+		BAD13E6A1BF2E0C500BC8AA8 /* GPS_View_Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPS_View_Controller.swift; sourceTree = "<group>"; };
+		BAD13E6C1BF2E63500BC8AA8 /* Settings_Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings_Controller.swift; sourceTree = "<group>"; };
 		BAFD05C31BE057BA00799FBD /* HSFlashBack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HSFlashBack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAFD05C61BE057BA00799FBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAFD05C81BE057BA00799FBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +68,10 @@
 				BAFD05CD1BE057BA00799FBD /* Assets.xcassets */,
 				BAFD05D21BE057BA00799FBD /* Info.plist */,
 				BA69BB911BEB0EB500DAB5CB /* hsfbData.plist */,
+				BAD13E661BF2DD8400BC8AA8 /* Salt_Page_Controller.swift */,
+				BAD13E681BF2DFB700BC8AA8 /* Sim_Picker_Page_Controller.swift */,
+				BAD13E6A1BF2E0C500BC8AA8 /* GPS_View_Controller.swift */,
+				BAD13E6C1BF2E63500BC8AA8 /* Settings_Controller.swift */,
 			);
 			path = HSFlashBack;
 			sourceTree = "<group>";
@@ -136,7 +148,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAD13E691BF2DFB700BC8AA8 /* Sim_Picker_Page_Controller.swift in Sources */,
 				BAFD05C91BE057BA00799FBD /* ViewController.swift in Sources */,
+				BAD13E6B1BF2E0C500BC8AA8 /* GPS_View_Controller.swift in Sources */,
+				BAD13E671BF2DD8400BC8AA8 /* Salt_Page_Controller.swift in Sources */,
+				BAD13E6D1BF2E63500BC8AA8 /* Settings_Controller.swift in Sources */,
 				BAFD05C71BE057BA00799FBD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
