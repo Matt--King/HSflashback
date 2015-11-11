@@ -88,19 +88,37 @@ class GPS_Page: UIViewController, CLLocationManagerDelegate {
                 var i: Int, shortestIter: Int
                 var oldDist: Double, newDist: Double
                 oldDist = 8000000
+                shortestIter = 0
                 for (i = 0; i < 12; i += 2) {
                     let dLon = servers[i+1] - lon
                     let dLat = servers[i] - lat
-                    newDist = sqrt(dLat + dLon)
+                    newDist = sqrt(abs(dLat) + abs(dLon))
+                    if newDist <= oldDist {
+                        oldDist = newDist
+                        shortestIter = (i/2)  //returns 0-5 instead of 0 - 10
+                    }
+                    
+                }
+                var painLocation: String
+                switch(shortestIter) {
+                case 0:
+                    painLocation = "New York City, NY, USA"
+                case 1:
+                    painLocation = "Chicago, IL, USA"
+                case 2:
+                    painLocation = "Los Angeles, CA, USA"
+                case 3:
+                    painLocation = "Rio de Janeiro, Brazil"
+                case 4:
+                    painLocation = "Sydney, South New Wales, Australia"
+                default:
+                    painLocation = "Singapore"
+
+                    
                     
                 }
                 
-                
-                
-                
-                
-                
-                closestServer.text = "Your Hearthstone trauma is occurring on the Blizzard servers located in New York City, NY, USA!"
+                closestServer.text = "Your Hearthstone trauma is occurring on the Blizzard servers located in \(painLocation)!"
                 
             }
     }
