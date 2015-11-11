@@ -340,10 +340,10 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="408"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B2X-NU-fml">
-                                        <rect key="frame" x="89" y="71" width="143" height="150"/>
+                                        <rect key="frame" x="77" y="47" width="167" height="221"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="150" id="PEi-8M-0sw"/>
-                                            <constraint firstAttribute="width" secondItem="B2X-NU-fml" secondAttribute="height" multiplier="143:150" id="ZGM-OM-VH1"/>
+                                            <constraint firstAttribute="width" secondItem="B2X-NU-fml" secondAttribute="height" multiplier="167:221" id="Rfe-sb-nXB"/>
+                                            <constraint firstAttribute="height" constant="221" id="gLS-5Q-ANM"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty" translatesAutoresizingMaskIntoConstraints="NO" id="BLD-0a-ckY">
@@ -379,10 +379,9 @@
                                     <constraint firstItem="XQK-Lp-2KC" firstAttribute="centerX" secondItem="bCL-SH-HbD" secondAttribute="centerX" id="bDG-FE-QcP"/>
                                     <constraint firstItem="RM5-84-Zps" firstAttribute="centerX" secondItem="XQK-Lp-2KC" secondAttribute="centerX" id="j3j-Zm-P8x"/>
                                     <constraint firstItem="RM5-84-Zps" firstAttribute="leading" secondItem="bCL-SH-HbD" secondAttribute="leading" constant="45" id="muk-YH-tTj"/>
-                                    <constraint firstItem="B2X-NU-fml" firstAttribute="top" secondItem="bCL-SH-HbD" secondAttribute="top" constant="71" id="oBE-ea-V1i"/>
                                     <constraint firstItem="XQK-Lp-2KC" firstAttribute="leading" secondItem="bCL-SH-HbD" secondAttribute="leading" constant="91" id="qvt-Tq-MK6"/>
+                                    <constraint firstItem="B2X-NU-fml" firstAttribute="top" secondItem="bCL-SH-HbD" secondAttribute="top" constant="47" id="t0a-Fs-aXj"/>
                                     <constraint firstItem="RM5-84-Zps" firstAttribute="top" secondItem="XQK-Lp-2KC" secondAttribute="bottom" constant="8" symbolic="YES" id="z2M-Wn-mlH"/>
-                                    <constraint firstItem="B2X-NU-fml" firstAttribute="centerX" secondItem="bCL-SH-HbD" secondAttribute="centerX" id="zma-n1-laQ"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
