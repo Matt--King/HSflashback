@@ -17,7 +17,7 @@ class GPS_Page: UIViewController, CLLocationManagerDelegate {
     var lon: Double!
     
     
-    var servers: [Double]
+    var servers: [Double] = [Double]()
     
     @IBOutlet weak var latBox: UILabel!
     @IBOutlet weak var lonBox: UILabel!
@@ -49,18 +49,18 @@ class GPS_Page: UIViewController, CLLocationManagerDelegate {
         }
         
         self.servers = [
-            40.7033127,
-            -73.979681,
+            40.7033127,  //New York City lat
+            -73.979681,  //New York City lon
             41.8337329,
-            -87.7321555,
+            -87.7321555, //Chicago
             34.0204989,
-            -118.4117325,
+            -118.4117325, //LA
             -22.9112335,
-            -43.448334,
+            -43.448334,  //Rio de Janeiro
             -33.7969235,
-            150.9224326,
+            150.9224326, // Sydney, Australia
             1.3147308,
-            103.8470128
+            103.8470128  //Singapore
         ]
 
         
@@ -77,14 +77,31 @@ class GPS_Page: UIViewController, CLLocationManagerDelegate {
                 print("there was no location to use")
             } else {
                 let newLocation = locations[0]
-                //Hard code this for now, eventually we need to fix this
-                closestServer.text = "Your Hearthstone trauma is occurring on the Blizzard servers located in New York City, NY, USA!"
-                
                 
                 lat = (newLocation.coordinate.latitude)
                 lon = (newLocation.coordinate.longitude)
                 latBox.text = "Latitude = \(lat)"
                 lonBox.text = "Longitude = \(lon)"
+
+                
+                //Let's do some distance formula math :D
+                var i: Int, shortestIter: Int
+                var oldDist: Double, newDist: Double
+                oldDist = 8000000
+                for (i = 0; i < 12; i += 2) {
+                    let dLon = servers[i+1] - lon
+                    let dLat = servers[i] - lat
+                    newDist = sqrt(dLat + dLon)
+                    
+                }
+                
+                
+                
+                
+                
+                
+                closestServer.text = "Your Hearthstone trauma is occurring on the Blizzard servers located in New York City, NY, USA!"
+                
             }
     }
     

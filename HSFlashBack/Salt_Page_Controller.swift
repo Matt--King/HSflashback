@@ -24,7 +24,7 @@ class Salt_Page: UIViewController {
         self.heroPortrait.image = UIImage(named: heroString)
         let heroName: String = heroString.stringByReplacingOccurrencesOfString("_", withString: " ")
         saltLabel.text = heroName + " makes you salty"
-        print(heroString)
+        
         
     }
     
