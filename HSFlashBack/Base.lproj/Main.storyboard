@@ -179,12 +179,6 @@
                                     <segue destination="qvu-yO-VXr" kind="show" id="Fxx-DS-wIG"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpX-QU-87a">
-                                <rect key="frame" x="0.0" y="439" width="320" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which Hero Makes You Salty?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWC-Jj-6B4">
                                 <rect key="frame" x="46" y="103" width="228" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -195,16 +189,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="OWC-Jj-6B4" firstAttribute="centerX" secondItem="sYn-yt-xPU" secondAttribute="centerX" id="2Ar-78-DtM"/>
-                            <constraint firstItem="4Q0-cN-sji" firstAttribute="top" secondItem="jpX-QU-87a" secondAttribute="bottom" constant="20" id="5C4-PP-Sfv"/>
                             <constraint firstItem="iDO-2n-5OV" firstAttribute="centerY" secondItem="sYn-yt-xPU" secondAttribute="centerY" id="7Ek-gL-WFl"/>
                             <constraint firstItem="iDO-2n-5OV" firstAttribute="centerX" secondItem="sYn-yt-xPU" secondAttribute="centerX" id="GOi-IK-HFC"/>
-                            <constraint firstItem="jpX-QU-87a" firstAttribute="centerX" secondItem="sYn-yt-xPU" secondAttribute="centerX" id="JvU-yU-O9A"/>
                             <constraint firstItem="iDO-2n-5OV" firstAttribute="centerX" secondItem="sYn-yt-xPU" secondAttribute="centerX" id="NUD-40-wfL"/>
                             <constraint firstItem="LTU-rw-7tb" firstAttribute="top" secondItem="iDO-2n-5OV" secondAttribute="bottom" constant="8" id="NkX-kw-b5R"/>
                             <constraint firstItem="zRp-Jo-KLc" firstAttribute="centerX" secondItem="sYn-yt-xPU" secondAttribute="centerX" id="Nyp-BK-OqD"/>
                             <constraint firstItem="zRp-Jo-KLc" firstAttribute="width" secondItem="sYn-yt-xPU" secondAttribute="width" id="Pt4-qb-vBL"/>
                             <constraint firstItem="zRp-Jo-KLc" firstAttribute="top" secondItem="A19-N6-2Wf" secondAttribute="bottom" id="R7A-pS-fh9"/>
-                            <constraint firstItem="jpX-QU-87a" firstAttribute="width" secondItem="sYn-yt-xPU" secondAttribute="width" id="eo3-YN-RfE"/>
                             <constraint firstItem="LTU-rw-7tb" firstAttribute="centerX" secondItem="sYn-yt-xPU" secondAttribute="centerX" id="tj9-Wm-FzY"/>
                             <constraint firstItem="LTU-rw-7tb" firstAttribute="centerX" secondItem="sYn-yt-xPU" secondAttribute="centerX" id="vVk-19-eLk"/>
                             <constraint firstItem="iDO-2n-5OV" firstAttribute="top" secondItem="OWC-Jj-6B4" secondAttribute="bottom" constant="8" id="xQY-VL-eFs"/>
@@ -213,7 +204,6 @@
                     <connections>
                         <outlet property="launchButton" destination="LTU-rw-7tb" id="Klw-pB-vvo"/>
                         <outlet property="picker" destination="oWr-Ht-x74" id="VDh-Kd-a2U"/>
-                        <outlet property="saltCountLabel" destination="jpX-QU-87a" id="T4Q-6N-jim"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sHr-wN-ztw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -493,7 +483,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="gTo-Es-cxG"/>
-        <segue reference="XC2-HU-z2O"/>
+        <segue reference="KMN-xN-BDx"/>
         <segue reference="1gs-rY-1S1"/>
     </inferredMetricsTieBreakers>
 </document>

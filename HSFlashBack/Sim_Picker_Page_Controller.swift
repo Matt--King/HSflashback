@@ -15,21 +15,11 @@ class Salt_Sim_Page: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
     
     @IBOutlet weak var launchButton: UIButton!
     @IBOutlet weak var picker: UIPickerView!
-    @IBOutlet weak var saltCountLabel: UILabel!
-    let saltCountKey = "saltCount"
-    var saltCountVal: NSInteger = 0
     var pickerData: [String] = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        let path = NSBundle.mainBundle().pathForResource("hsfbData", ofType: "plist")
-        
-        let data = NSDictionary(contentsOfFile: path!)
-        if let dict = data{
-            saltCountVal = dict.objectForKey(saltCountKey) as! NSInteger
-        }
         
         // Do any additional setup after loading the view, typically from a nib.
         
@@ -39,7 +29,7 @@ class Salt_Sim_Page: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
         
         // Input data into the Array:
         pickerData = ["Druid", "Hunter", "Mage", "Paladin", "Priest",  "Rogue", "Shaman", "Warlock", "Warrior"]
-        self.saltCountLabel.text = "Number of times you've been salty: \(saltCountVal)."
+      
     }
     
     override func didReceiveMemoryWarning() {
@@ -70,14 +60,6 @@ class Salt_Sim_Page: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
         if (sender!.isEqual(self.launchButton)) {
             var saltVC = Salt_Page()
             saltVC = segue.destinationViewController as! Salt_Page
-            
-            //Increment the salt count and write to the stored file
-            //This functionality works on the emulator but not an iPod. y u do dis apple
-            let path = NSBundle.mainBundle().pathForResource("hsfbData", ofType: "plist")
-            let dict: NSMutableDictionary = ["XInitializerItem": "DoNotEverChangeMe"]
-            let saltCountValInc = saltCountVal + 1
-            dict.setValue(saltCountValInc, forKey: saltCountKey)
-            dict.writeToFile(path!, atomically: false)
             
             var temp: String
             let input = picker.selectedRowInComponent(0)
