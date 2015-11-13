@@ -87,7 +87,7 @@ class GPS_Page: UIViewController, CLLocationManagerDelegate {
                 //Let's do some distance formula math :D
                 var i: Int, shortestIter: Int
                 var oldDist: Double, newDist: Double
-                oldDist = 8000000
+                oldDist = 200
                 shortestIter = 0
                 for (i = 0; i < 12; i += 2) {
                     let dLon = servers[i+1] - lon
