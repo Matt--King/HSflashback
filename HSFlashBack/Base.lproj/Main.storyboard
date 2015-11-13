@@ -424,10 +424,10 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emote" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V78-VH-gWR" userLabel="Emote">
-                                <rect key="frame" x="0.0" y="457" width="320" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emote" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V78-VH-gWR" userLabel="Emote">
+                                <rect key="frame" x="35" y="452" width="250" height="20"/>
                                 <accessibility key="accessibilityConfiguration" label="Emote"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -451,12 +451,12 @@
                             <constraint firstItem="tvI-Dg-oUS" firstAttribute="top" secondItem="x8d-Ss-dxr" secondAttribute="bottom" id="7cz-ys-OAZ"/>
                             <constraint firstItem="tvI-Dg-oUS" firstAttribute="centerX" secondItem="joW-qi-Pt2" secondAttribute="centerX" id="Fdj-qD-Zaa"/>
                             <constraint firstItem="tvI-Dg-oUS" firstAttribute="width" secondItem="joW-qi-Pt2" secondAttribute="width" id="LZh-rm-3gA"/>
-                            <constraint firstItem="dMW-Yl-GDP" firstAttribute="top" secondItem="V78-VH-gWR" secondAttribute="bottom" constant="8" id="QNn-Bh-lEx"/>
-                            <constraint firstItem="V78-VH-gWR" firstAttribute="centerX" secondItem="joW-qi-Pt2" secondAttribute="centerX" id="Zpa-Bl-Wko"/>
-                            <constraint firstItem="V78-VH-gWR" firstAttribute="width" secondItem="joW-qi-Pt2" secondAttribute="width" id="iba-sZ-bCY"/>
                             <constraint firstItem="icL-3W-2vh" firstAttribute="centerX" secondItem="joW-qi-Pt2" secondAttribute="centerX" id="kZk-I0-w6d"/>
                             <constraint firstItem="icL-3W-2vh" firstAttribute="centerY" secondItem="joW-qi-Pt2" secondAttribute="centerY" id="kkg-Cr-CgX"/>
+                            <constraint firstItem="dMW-Yl-GDP" firstAttribute="top" secondItem="V78-VH-gWR" secondAttribute="bottom" constant="8" id="lEh-dL-8XU"/>
+                            <constraint firstItem="V78-VH-gWR" firstAttribute="centerX" secondItem="joW-qi-Pt2" secondAttribute="centerX" id="npX-nf-spJ"/>
                             <constraint firstItem="icL-3W-2vh" firstAttribute="top" secondItem="tvI-Dg-oUS" secondAttribute="bottom" constant="3" id="qo5-Oe-Ves"/>
+                            <constraint firstItem="V78-VH-gWR" firstAttribute="width" secondItem="joW-qi-Pt2" secondAttribute="width" constant="-70" id="vyD-Zk-TmU"/>
                         </constraints>
                     </view>
                     <toolbarItems>

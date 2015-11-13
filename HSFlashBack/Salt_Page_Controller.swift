@@ -18,6 +18,23 @@ class Salt_Page: UIViewController {
     var heroString: String!
     var audioPlayer: AVAudioPlayer!
     
+    
+    override func viewDidAppear(animated: Bool)
+    {
+        super.viewDidAppear(animated)
+        
+        var alertController:UIAlertController?
+        alertController = UIAlertController(title: "Tap the Screen",
+            message: "Tap to truly experience saltiness", preferredStyle: .Alert)
+        
+        let firstAction = UIAlertAction(title: "Sounds Good", style: UIAlertActionStyle.Cancel, handler: nil)
+        alertController!.addAction(firstAction)
+        self.presentViewController(alertController!, animated: true, completion: nil)
+        
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
