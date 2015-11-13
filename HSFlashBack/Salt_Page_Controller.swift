@@ -13,7 +13,6 @@ import AVFoundation
 class Salt_Page: UIViewController {
     
     
-    @IBOutlet weak var emoteButton: UIButton!
     @IBOutlet weak var saltLabel: UILabel!
     @IBOutlet weak var heroPortrait: UIImageView!
     var heroString: String!
@@ -35,9 +34,9 @@ class Salt_Page: UIViewController {
     }
     
     
-    @IBAction func emotePress(sender: UIButton) {
+    @IBAction func emotePress(sender: AnyObject) {
         
-        playSound("audiofile")
+        playSound(heroString)
         
     }
     

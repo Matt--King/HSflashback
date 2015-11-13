@@ -450,14 +450,10 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="icL-3W-2vh" secondAttribute="height" multiplier="50:69" id="ECS-Pf-WvQ"/>
                                 </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5I-yH-obd">
-                                <rect key="frame" x="20" y="420" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="emotePress:" destination="qvu-yO-VXr" eventType="touchUpInside" id="1Or-oX-LvY"/>
+                                    <outletCollection property="gestureRecognizers" destination="Wsa-3u-hJ4" appends="YES" id="fYE-Me-2vZ"/>
                                 </connections>
-                            </button>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
@@ -478,12 +474,16 @@
                     </toolbarItems>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="emoteButton" destination="n5I-yH-obd" id="7hN-zP-eou"/>
                         <outlet property="heroPortrait" destination="icL-3W-2vh" id="uzo-4g-PgH"/>
                         <outlet property="saltLabel" destination="V78-VH-gWR" id="2e6-Mx-hzX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Uy-hX-9Ar" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Wsa-3u-hJ4">
+                    <connections>
+                        <action selector="emotePress:" destination="qvu-yO-VXr" id="EUg-Pv-6KM"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-543" y="-1433"/>
         </scene>
