@@ -18,11 +18,14 @@ class GPS_Page: UIViewController, CLLocationManagerDelegate {
     
     
     var servers: [Double] = [Double]()
+    var serverNames: [String] = [String]()
     
     @IBOutlet weak var latBox: UILabel!
     @IBOutlet weak var lonBox: UILabel!
     @IBOutlet weak var locBox: UILabel!
     @IBOutlet weak var closestServer: UITextView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -63,6 +66,14 @@ class GPS_Page: UIViewController, CLLocationManagerDelegate {
             103.8470128  //Singapore
         ]
 
+        self.serverNames = [
+            "New York City, NY, USA",
+            "Chicago, IL, USA",
+            "Los Angeles, CA, USA",
+            "Rio de Janeiro, Brazil",
+            "Sydney, South New Wales, Australia",
+            "Singapore"
+        ]
         
     }
     override func didReceiveMemoryWarning() {
@@ -95,30 +106,14 @@ class GPS_Page: UIViewController, CLLocationManagerDelegate {
                     newDist = sqrt(abs(dLat) + abs(dLon))
                     if newDist <= oldDist {
                         oldDist = newDist
-                        shortestIter = (i/2)  //returns 0-5 instead of 0 - 10
+                        shortestIter = (i/2)  //returns 0 - 5 instead of 0 - 10
                     }
                     
                 }
-                var painLocation: String
-                switch(shortestIter) {
-                case 0:
-                    painLocation = "New York City, NY, USA"
-                case 1:
-                    painLocation = "Chicago, IL, USA"
-                case 2:
-                    painLocation = "Los Angeles, CA, USA"
-                case 3:
-                    painLocation = "Rio de Janeiro, Brazil"
-                case 4:
-                    painLocation = "Sydney, South New Wales, Australia"
-                default:
-                    painLocation = "Singapore"
-
-                    
-                    
-                }
-                
+                let painLocation:String = serverNames[shortestIter]
                 closestServer.text = "Your Hearthstone trauma is occurring on the Blizzard servers located in \(painLocation)!"
+                
+                
                 
             }
     }
