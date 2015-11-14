@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BA69BB921BEB0EB500DAB5CB /* hsfbData.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA69BB911BEB0EB500DAB5CB /* hsfbData.plist */; };
 		BA7FA3351BF594D500A40D4E /* Anduin_Wrynn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA7FA3341BF594D500A40D4E /* Anduin_Wrynn.mp3 */; };
 		BA7FA3371BF5965C00A40D4E /* Uther_Lightbringer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA7FA3361BF5965C00A40D4E /* Uther_Lightbringer.mp3 */; };
 		BA7FA3391BF5966700A40D4E /* Garrosh_Hellscream.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA7FA3381BF5966700A40D4E /* Garrosh_Hellscream.mp3 */; };
@@ -35,7 +34,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BA69BB911BEB0EB500DAB5CB /* hsfbData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = hsfbData.plist; sourceTree = "<group>"; };
 		BA7FA3341BF594D500A40D4E /* Anduin_Wrynn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Anduin_Wrynn.mp3; path = HSFlashBack/Anduin_Wrynn.mp3; sourceTree = "<group>"; };
 		BA7FA3361BF5965C00A40D4E /* Uther_Lightbringer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Uther_Lightbringer.mp3; sourceTree = "<group>"; };
 		BA7FA3381BF5966700A40D4E /* Garrosh_Hellscream.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Garrosh_Hellscream.mp3; sourceTree = "<group>"; };
@@ -115,7 +113,6 @@
 				BAFD05CA1BE057BA00799FBD /* Main.storyboard */,
 				BAFD05CD1BE057BA00799FBD /* Assets.xcassets */,
 				BAFD05D21BE057BA00799FBD /* Info.plist */,
-				BA69BB911BEB0EB500DAB5CB /* hsfbData.plist */,
 				BAD13E661BF2DD8400BC8AA8 /* Salt_Page_Controller.swift */,
 				BAD13E681BF2DFB700BC8AA8 /* Sim_Picker_Page_Controller.swift */,
 				BAD13E6A1BF2E0C500BC8AA8 /* GPS_View_Controller.swift */,
@@ -195,8 +192,7 @@
 				BA7FA3411BF5969600A40D4E /* Rexxar.mp3 in Resources */,
 				BA7FA3431BF596BB00A40D4E /* Thrall.mp3 in Resources */,
 				BA7FA3371BF5965C00A40D4E /* Uther_Lightbringer.mp3 in Resources */,
-				BA7FA3451BF596C500A40D4E /* Valeera_Sanguinar.mp3 in Resources */,
-				BA69BB921BEB0EB500DAB5CB /* hsfbData.plist in Resources */,
+				BA7FA3351BF594D500A40D4E /* Anduin_Wrynn.mp3 in Resources */,
 				BAFD05CE1BE057BA00799FBD /* Assets.xcassets in Resources */,
 				BAFD05CC1BE057BA00799FBD /* Main.storyboard in Resources */,
 			);

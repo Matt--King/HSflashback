@@ -10,11 +10,14 @@ import Foundation
 import UIKit
 
 
-class Settings_Page: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class Settings_Page: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
     
     @IBOutlet weak var imageView: UIImageView!
     let imagePicker = UIImagePickerController()
+    @IBOutlet weak var heroPortrait: UIView!
+    @IBOutlet weak var nameField: UITextField!
+    
     
     // Custom Hero Portrait Feature
     
@@ -62,16 +65,44 @@ class Settings_Page: UIViewController, UIImagePickerControllerDelegate, UINaviga
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    // Full class
+    
+    // onDownloadButton
+    @IBAction func saveHeroPortrait(sender: AnyObject) {
+        // access big view
+        // turn view into uiima
+        UIGraphicsBeginImageContext(heroPortrait.bounds.size);
+        heroPortrait.layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        let screenShot = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        UIImageWriteToSavedPhotosAlbum(screenShot, self, "image:didFinishSavingWithError:contextInfo:", nil)
+        
+    }
     
     
     
+    func image(image: UIImage, didFinishSavingWithError error: NSError?, contextInfo:UnsafePointer<Void>) {
+        if error == nil {
+            let ac = UIAlertController(title: "Saved!", message: "Your hero portrait has been saved to your photos.", preferredStyle: .Alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            presentViewController(ac, animated: true, completion: nil)
+        } else {
+            let ac = UIAlertController(title: "Save error", message: error?.localizedDescription, preferredStyle: .Alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            presentViewController(ac, animated: true, completion: nil)
+        }
+    }
     
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        nameField.resignFirstResponder()
+        return true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        nameField.delegate = self;
         imagePicker.delegate = self
     }
     
