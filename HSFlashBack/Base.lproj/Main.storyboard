@@ -137,29 +137,19 @@
                         <viewControllerLayoutGuide type="bottom" id="4Q0-cN-sji"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="sYn-yt-xPU">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="iDO-2n-5OV">
-                                <rect key="frame" x="0.0" y="132" width="320" height="216"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OGE-HL-dkh">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
-                                        <subviews>
-                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oWr-Ht-x74">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
-                                            </pickerView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oWr-Ht-x74">
+                                <rect key="frame" x="0.0" y="133" width="600" height="216"/>
+                            </pickerView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zRp-Jo-KLc">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Saltiness Simulator" id="3Jb-s4-WiP">
                                         <barButtonItem key="leftBarButtonItem" title="Back" style="plain" id="fjM-cP-MOJ">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tR0-nv-mQW">
-                                                <rect key="frame" x="16" y="7" width="71" height="30"/>
+                                                <rect key="frame" x="20" y="7" width="71" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Back"/>
                                                 <connections>
@@ -170,33 +160,33 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which Hero Makes You Salty?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWC-Jj-6B4">
+                                <rect key="frame" x="186" y="104" width="228" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTU-rw-7tb">
-                                <rect key="frame" x="104" y="356" width="113" height="30"/>
+                                <rect key="frame" x="0.0" y="357" width="600" height="30"/>
                                 <state key="normal" title="Unleash the Salt"/>
                                 <connections>
                                     <segue destination="qvu-yO-VXr" kind="show" id="Fxx-DS-wIG"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which Hero Makes You Salty?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWC-Jj-6B4">
-                                <rect key="frame" x="46" y="103" width="228" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="OWC-Jj-6B4" firstAttribute="centerX" secondItem="sYn-yt-xPU" secondAttribute="centerX" id="2Ar-78-DtM"/>
-                            <constraint firstItem="iDO-2n-5OV" firstAttribute="centerY" secondItem="sYn-yt-xPU" secondAttribute="centerY" id="7Ek-gL-WFl"/>
-                            <constraint firstItem="iDO-2n-5OV" firstAttribute="centerX" secondItem="sYn-yt-xPU" secondAttribute="centerX" id="GOi-IK-HFC"/>
-                            <constraint firstItem="iDO-2n-5OV" firstAttribute="centerX" secondItem="sYn-yt-xPU" secondAttribute="centerX" id="NUD-40-wfL"/>
-                            <constraint firstItem="LTU-rw-7tb" firstAttribute="top" secondItem="iDO-2n-5OV" secondAttribute="bottom" constant="8" id="NkX-kw-b5R"/>
+                            <constraint firstItem="zRp-Jo-KLc" firstAttribute="top" secondItem="A19-N6-2Wf" secondAttribute="bottom" id="LDU-n5-gX6"/>
                             <constraint firstItem="zRp-Jo-KLc" firstAttribute="centerX" secondItem="sYn-yt-xPU" secondAttribute="centerX" id="Nyp-BK-OqD"/>
                             <constraint firstItem="zRp-Jo-KLc" firstAttribute="width" secondItem="sYn-yt-xPU" secondAttribute="width" id="Pt4-qb-vBL"/>
-                            <constraint firstItem="zRp-Jo-KLc" firstAttribute="top" secondItem="A19-N6-2Wf" secondAttribute="bottom" id="R7A-pS-fh9"/>
-                            <constraint firstItem="LTU-rw-7tb" firstAttribute="centerX" secondItem="sYn-yt-xPU" secondAttribute="centerX" id="tj9-Wm-FzY"/>
+                            <constraint firstItem="oWr-Ht-x74" firstAttribute="centerX" secondItem="sYn-yt-xPU" secondAttribute="centerX" id="RuT-5A-Fa1"/>
+                            <constraint firstItem="OWC-Jj-6B4" firstAttribute="top" secondItem="zRp-Jo-KLc" secondAttribute="bottom" constant="40" id="Sb5-0W-bsF"/>
+                            <constraint firstItem="oWr-Ht-x74" firstAttribute="top" secondItem="OWC-Jj-6B4" secondAttribute="bottom" constant="8" id="dYw-wy-adR"/>
+                            <constraint firstItem="oWr-Ht-x74" firstAttribute="width" secondItem="sYn-yt-xPU" secondAttribute="width" id="i2L-Zp-V7o"/>
+                            <constraint firstItem="LTU-rw-7tb" firstAttribute="top" secondItem="oWr-Ht-x74" secondAttribute="bottom" constant="8" id="lbv-N5-Uw9"/>
+                            <constraint firstItem="LTU-rw-7tb" firstAttribute="width" secondItem="sYn-yt-xPU" secondAttribute="width" id="owH-Kw-4TO"/>
                             <constraint firstItem="LTU-rw-7tb" firstAttribute="centerX" secondItem="sYn-yt-xPU" secondAttribute="centerX" id="vVk-19-eLk"/>
-                            <constraint firstItem="iDO-2n-5OV" firstAttribute="top" secondItem="OWC-Jj-6B4" secondAttribute="bottom" constant="8" id="xQY-VL-eFs"/>
                         </constraints>
                     </view>
                     <connections>
@@ -206,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sHr-wN-ztw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1019" y="-1412"/>
+            <point key="canvasLocation" x="-871" y="-1414"/>
         </scene>
         <!--Page-->
         <scene sceneID="vAt-5f-e1Z">
@@ -414,10 +404,15 @@
                                 </constraints>
                                 <items>
                                     <navigationItem title="PJSalt" id="lEy-NQ-cm1">
-                                        <barButtonItem key="leftBarButtonItem" title="Concede" id="9vq-PU-tqC">
-                                            <connections>
-                                                <segue destination="O1I-XG-WbR" kind="show" id="1gs-rY-1S1"/>
-                                            </connections>
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="Ao5-bD-VvK">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="g94-ye-wLd">
+                                                <rect key="frame" x="16" y="7" width="71" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Concede"/>
+                                                <connections>
+                                                    <segue destination="O1I-XG-WbR" kind="show" id="rFQ-c0-rYV"/>
+                                                </connections>
+                                            </button>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -473,15 +468,15 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-543" y="-1433"/>
+            <point key="canvasLocation" x="-360" y="-1474"/>
         </scene>
     </scenes>
     <resources>
         <image name="empty" width="823" height="1179"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="K4g-qR-uNj"/>
-        <segue reference="KMN-xN-BDx"/>
         <segue reference="IXb-TM-Old"/>
+        <segue reference="KMN-xN-BDx"/>
+        <segue reference="rFQ-c0-rYV"/>
     </inferredMetricsTieBreakers>
 </document>
