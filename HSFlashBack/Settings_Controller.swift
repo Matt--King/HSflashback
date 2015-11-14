@@ -72,7 +72,7 @@ class Settings_Page: UIViewController, UIImagePickerControllerDelegate, UINaviga
         // turn view into uiima
         UIGraphicsBeginImageContext(heroPortrait.bounds.size);
         heroPortrait.layer.renderInContext(UIGraphicsGetCurrentContext()!)
-        var screenShot = UIGraphicsGetImageFromCurrentImageContext();
+        let screenShot = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
         
         UIImageWriteToSavedPhotosAlbum(screenShot, self, "image:didFinishSavingWithError:contextInfo:", nil)
