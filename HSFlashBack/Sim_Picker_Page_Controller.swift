@@ -86,6 +86,8 @@ class Salt_Sim_Page: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
             }
             
             saltVC.heroString = temp
+        } else {
+            print("Back button")
         }
     }
     
