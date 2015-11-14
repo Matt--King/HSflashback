@@ -21,6 +21,12 @@
 		BAD13E691BF2DFB700BC8AA8 /* Sim_Picker_Page_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD13E681BF2DFB700BC8AA8 /* Sim_Picker_Page_Controller.swift */; };
 		BAD13E6B1BF2E0C500BC8AA8 /* GPS_View_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD13E6A1BF2E0C500BC8AA8 /* GPS_View_Controller.swift */; };
 		BAD13E6D1BF2E63500BC8AA8 /* Settings_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD13E6C1BF2E63500BC8AA8 /* Settings_Controller.swift */; };
+		BADA637D1BF7DB7A00363ECD /* GET_IN_HERE.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BADA637C1BF7DB7A00363ECD /* GET_IN_HERE.mp3 */; };
+		BADA63811BF7DBE700363ECD /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA63801BF7DBE700363ECD /* GameViewController.swift */; };
+		BADA63831BF7DC2100363ECD /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA63821BF7DC2100363ECD /* GameScene.swift */; };
+		BADA63851BF7DC5800363ECD /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = BADA63841BF7DC5800363ECD /* GameScene.sks */; };
+		BADA63871BF7DE6800363ECD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BADA63861BF7DE6800363ECD /* AVFoundation.framework */; };
+		BADA63891BF7DE7700363ECD /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BADA63881BF7DE7700363ECD /* SceneKit.framework */; };
 		BAFD05C71BE057BA00799FBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFD05C61BE057BA00799FBD /* AppDelegate.swift */; };
 		BAFD05C91BE057BA00799FBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFD05C81BE057BA00799FBD /* ViewController.swift */; };
 		BAFD05CC1BE057BA00799FBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAFD05CA1BE057BA00799FBD /* Main.storyboard */; };
@@ -42,6 +48,12 @@
 		BAD13E681BF2DFB700BC8AA8 /* Sim_Picker_Page_Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sim_Picker_Page_Controller.swift; sourceTree = "<group>"; };
 		BAD13E6A1BF2E0C500BC8AA8 /* GPS_View_Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPS_View_Controller.swift; sourceTree = "<group>"; };
 		BAD13E6C1BF2E63500BC8AA8 /* Settings_Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings_Controller.swift; sourceTree = "<group>"; };
+		BADA637C1BF7DB7A00363ECD /* GET_IN_HERE.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = GET_IN_HERE.mp3; path = ../../../Users/mwk5wy/Downloads/GET_IN_HERE.mp3; sourceTree = "<group>"; };
+		BADA63801BF7DBE700363ECD /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		BADA63821BF7DC2100363ECD /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		BADA63841BF7DC5800363ECD /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = GameScene.sks; path = ../../practiceSpriteKit/practiceSpriteKit/GameScene.sks; sourceTree = "<group>"; };
+		BADA63861BF7DE6800363ECD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BADA63881BF7DE7700363ECD /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		BAFD05C31BE057BA00799FBD /* HSFlashBack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HSFlashBack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAFD05C61BE057BA00799FBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAFD05C81BE057BA00799FBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BADA63891BF7DE7700363ECD /* SceneKit.framework in Frameworks */,
+				BADA63871BF7DE6800363ECD /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +78,9 @@
 		BAFD05BA1BE057BA00799FBD = {
 			isa = PBXGroup;
 			children = (
+				BADA63881BF7DE7700363ECD /* SceneKit.framework */,
+				BADA63861BF7DE6800363ECD /* AVFoundation.framework */,
+				BADA637C1BF7DB7A00363ECD /* GET_IN_HERE.mp3 */,
 				BA7FA3441BF596C500A40D4E /* Valeera_Sanguinar.mp3 */,
 				BA7FA3421BF596BB00A40D4E /* Thrall.mp3 */,
 				BA7FA3401BF5969600A40D4E /* Rexxar.mp3 */,
@@ -89,6 +106,7 @@
 		BAFD05C51BE057BA00799FBD /* HSFlashBack */ = {
 			isa = PBXGroup;
 			children = (
+				BADA63841BF7DC5800363ECD /* GameScene.sks */,
 				BAFD05C61BE057BA00799FBD /* AppDelegate.swift */,
 				BAFD05C81BE057BA00799FBD /* ViewController.swift */,
 				BAFD05CA1BE057BA00799FBD /* Main.storyboard */,
@@ -99,6 +117,8 @@
 				BAD13E681BF2DFB700BC8AA8 /* Sim_Picker_Page_Controller.swift */,
 				BAD13E6A1BF2E0C500BC8AA8 /* GPS_View_Controller.swift */,
 				BAD13E6C1BF2E63500BC8AA8 /* Settings_Controller.swift */,
+				BADA63801BF7DBE700363ECD /* GameViewController.swift */,
+				BADA63821BF7DC2100363ECD /* GameScene.swift */,
 			);
 			path = HSFlashBack;
 			sourceTree = "<group>";
@@ -162,9 +182,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BADA637D1BF7DB7A00363ECD /* GET_IN_HERE.mp3 in Resources */,
 				BA7FA3351BF594D500A40D4E /* Anduin_Wrynn.mp3 in Resources */,
 				BA7FA3391BF5966700A40D4E /* Garrosh_Hellscream.mp3 in Resources */,
 				BA7FA33B1BF5967000A40D4E /* Guldan.mp3 in Resources */,
+				BADA63851BF7DC5800363ECD /* GameScene.sks in Resources */,
 				BA7FA33D1BF5967B00A40D4E /* Jaina_Proudmoore.mp3 in Resources */,
 				BA7FA33F1BF5968900A40D4E /* Malfurion_Stormrage.mp3 in Resources */,
 				BA7FA3411BF5969600A40D4E /* Rexxar.mp3 in Resources */,
@@ -184,7 +206,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BADA63811BF7DBE700363ECD /* GameViewController.swift in Sources */,
 				BAD13E691BF2DFB700BC8AA8 /* Sim_Picker_Page_Controller.swift in Sources */,
+				BADA63831BF7DC2100363ECD /* GameScene.swift in Sources */,
 				BAFD05C91BE057BA00799FBD /* ViewController.swift in Sources */,
 				BAD13E6B1BF2E0C500BC8AA8 /* GPS_View_Controller.swift in Sources */,
 				BAD13E671BF2DD8400BC8AA8 /* Salt_Page_Controller.swift in Sources */,
