@@ -162,15 +162,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA7FA3451BF596C500A40D4E /* Valeera_Sanguinar.mp3 in Resources */,
-				BA7FA3431BF596BB00A40D4E /* Thrall.mp3 in Resources */,
-				BA7FA3411BF5969600A40D4E /* Rexxar.mp3 in Resources */,
-				BA7FA33F1BF5968900A40D4E /* Malfurion_Stormrage.mp3 in Resources */,
-				BA7FA33D1BF5967B00A40D4E /* Jaina_Proudmoore.mp3 in Resources */,
-				BA7FA33B1BF5967000A40D4E /* Guldan.mp3 in Resources */,
-				BA7FA3391BF5966700A40D4E /* Garrosh_Hellscream.mp3 in Resources */,
-				BA7FA3371BF5965C00A40D4E /* Uther_Lightbringer.mp3 in Resources */,
 				BA7FA3351BF594D500A40D4E /* Anduin_Wrynn.mp3 in Resources */,
+				BA7FA3391BF5966700A40D4E /* Garrosh_Hellscream.mp3 in Resources */,
+				BA7FA33B1BF5967000A40D4E /* Guldan.mp3 in Resources */,
+				BA7FA33D1BF5967B00A40D4E /* Jaina_Proudmoore.mp3 in Resources */,
+				BA7FA33F1BF5968900A40D4E /* Malfurion_Stormrage.mp3 in Resources */,
+				BA7FA3411BF5969600A40D4E /* Rexxar.mp3 in Resources */,
+				BA7FA3431BF596BB00A40D4E /* Thrall.mp3 in Resources */,
+				BA7FA3371BF5965C00A40D4E /* Uther_Lightbringer.mp3 in Resources */,
+				BA7FA3451BF596C500A40D4E /* Valeera_Sanguinar.mp3 in Resources */,
 				BA69BB921BEB0EB500DAB5CB /* hsfbData.plist in Resources */,
 				BAFD05CE1BE057BA00799FBD /* Assets.xcassets in Resources */,
 				BAFD05CC1BE057BA00799FBD /* Main.storyboard in Resources */,

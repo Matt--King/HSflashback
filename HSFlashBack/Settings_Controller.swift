@@ -19,11 +19,21 @@ class Settings_Page: UIViewController, UIImagePickerControllerDelegate, UINaviga
     // Custom Hero Portrait Feature
     
     @IBAction func loadImage(sender: UIButton) {
+        if UIImagePickerController.isSourceTypeAvailable(.Camera){
         
-        
-        imagePicker.allowsEditing = false
-        imagePicker.sourceType = .Camera
-        presentViewController(imagePicker, animated: true, completion: nil)
+            imagePicker.allowsEditing = false
+            imagePicker.sourceType = .Camera
+            presentViewController(imagePicker, animated: true, completion: nil)
+        } else {
+            var alertController:UIAlertController?
+            alertController = UIAlertController(title: "Oops",
+                message: "We can't seem to find your device's camera.", preferredStyle: .Alert)
+            
+            let firstAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
+            alertController!.addAction(firstAction)
+            self.presentViewController(alertController!, animated: true, completion: nil)
+
+        }
         
     }
     
