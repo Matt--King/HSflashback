@@ -117,17 +117,17 @@ class Settings_Page: UIViewController, UIImagePickerControllerDelegate, UINaviga
             
             let firstAction = UIAlertAction(title: "Keep Editing", style: UIAlertActionStyle.Cancel, handler: nil)
             alertController!.addAction(firstAction)
-            
-            //let secondAction = UIAlertAction(title: "Leave", style: UIAlertActionStyle.Default,
-            //    handler: alertSegueHandler )
-            //alertController!.addAction(secondAction)
+            let secondAction = UIAlertAction(title: "Discard Edits", style: UIAlertActionStyle.Destructive, handler: alertSegueHandler)
+            alertController!.addAction(secondAction)
+
             self.presentViewController(alertController!, animated: true, completion: nil)
         
         }
+        performSegueWithIdentifier("settingsToHomeSeg", sender: nil)
     }
     
     func alertSegueHandler(alert: UIAlertAction!) {
-        performSegueWithIdentifier("SetToHomeSeg", sender: nil)
+        performSegueWithIdentifier("settingsToHomeSeg", sender: nil)
     }
     
     

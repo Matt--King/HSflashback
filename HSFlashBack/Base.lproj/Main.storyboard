@@ -479,7 +479,6 @@
                                                 <state key="normal" title="Back"/>
                                                 <connections>
                                                     <action selector="backCheck:" destination="vlm-b6-Yz7" eventType="touchUpInside" id="VHE-Bp-BcA"/>
-                                                    <segue destination="BYZ-38-t0r" kind="show" identifier="alertSegueHandler" id="Aga-9T-phQ"/>
                                                 </connections>
                                             </button>
                                         </barButtonItem>
@@ -510,7 +509,7 @@
                                                 <rect key="frame" x="56" y="217" width="124" height="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
                                                         <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -560,6 +559,7 @@
                         <outlet property="heroPortrait" destination="yfd-s0-iPc" id="5kA-Fc-DAa"/>
                         <outlet property="imageView" destination="B2X-NU-fml" id="oga-5V-EBG"/>
                         <outlet property="nameField" destination="qa5-HH-e1J" id="XzE-fm-4qn"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="settingsToHomeSeg" id="sEt-4K-CjT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="anl-il-Lha" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -656,8 +656,8 @@
         <image name="empty" width="823" height="1179"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Aga-9T-phQ"/>
+        <segue reference="sEt-4K-CjT"/>
+        <segue reference="XC2-HU-z2O"/>
         <segue reference="rFQ-c0-rYV"/>
-        <segue reference="KMN-xN-BDx"/>
     </inferredMetricsTieBreakers>
 </document>
